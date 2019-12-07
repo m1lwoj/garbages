@@ -1,0 +1,88 @@
+.Appd-header {
+    background-color: red;
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+
+.garbage-container-icon {
+    font-size: 150px !important;
+}
+
+.paper-container-icon {
+    color: #0101ffa6;
+}
+
+.paper-container-text {
+    background-color: #0000ffa6;
+}
+
+.plasticandmetals-container-icon {
+    color: #ffff008c;
+}
+
+.plasticandmetals-container-text {
+    background-color: #ffff008c;
+}
+
+.mixed-container-icon {
+    color: #3f3f3f7a;
+}
+
+.mixed-container-text {
+    background-color: #0000005d;
+}
+
+.mixed-container-icon {
+    color: #000000ab;
+}
+
+.bio-container-text {
+    background-color: #a53939f0;
+}
+
+.bio-container-icon {
+    color: #a53939f0;
+}
+
+.bio-container-text {
+    background-color: #877569;
+}
+
+.bio-container-icon {
+    color: #877569;
+}
+
+.glass-container-text {
+    background-color: #00ff00;
+}
+
+.glass-container-icon {
+    color: #09ff00;
+}

@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #6db8bc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.container-background {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* 
+How ugly and unprofessional are those importants
+How dare I 
+*/
+.MuiAutocomplete-input {
+  font-size: 60px !important;
+  margin-top: 20px !important;
+}
+
+.MuiInputLabel-formControl {
+  font-size: 40px !important;
+}
+
+.MuiIconButton-label {
+  /* display: none !important; */
+  font-size: 30px;
+}
+
+.MuiAutocomplete-popupIndicator {
+  display: none !important;
+}
