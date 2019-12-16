@@ -7,6 +7,16 @@ import { ContainerDescription } from './containerDescription'
 import '../css/style.css';
 import $ from 'jquery'
 
+
+const styles = {
+
+  largeIcon: {
+    width: 60,
+    height: 60,
+  },
+
+};
+
 export class NameForm extends Component {
   constructor(props) {
     super(props);
@@ -62,7 +72,7 @@ export class NameForm extends Component {
         color = ContainerColors.NONE
     }
 
-    $(".App-header").css({
+    $("body").css({
       transition: 'background-color 1s ease-in-out',
       "background-color": color
     });
@@ -96,19 +106,20 @@ export class NameForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <div >
+        <div class="search-header">
           <Autocomplete
             id="combo-box-demo"
             options={garbages}
             getOptionLabel={option => option.name}
-            style={{ width: 500, height: '100px', width: '800px', borderWidth: '20px', fontSize: '40px' }}
+            style={{ }}
+            size="medium"
             onChange={this.handleChange}
             renderInput={params => (
-              <TextField {...params} label="Co chcesz wyrzucić?" variant="standard" fullWidth />
+              <TextField {...params} iconStyle={styles.largeIcon}  style={{ fontSize: 15, textOverflow: 'ellipsis', overflow: 'hidden' }} label="Co chcesz wyrzucić?" variant="standard" fullWidth  />
             )}
           />
         </div>
-        <div style={{ margin: "50px", marginTop: "100px" }}>
+        <div class="search-footer" style={{ margin: "50px", marginTop: "100px" }}>
           <label style={{ display: 'inline-block' }}>
             <DeleteIcon class="garbage-container-icon MuiSvgIcon-root" />
           </label>
@@ -222,7 +233,9 @@ const garbages = [
   { name: 'Olej jadalny', container: Containers.MIXED },
   { name: 'Kurz', container: Containers.MIXED },
   { name: 'Szklana butelka po napoju', container: Containers.GLASS, additionalInfo: 'Opakowanie powinno być puste' },
-  { name: 'Szklane opakowanie po ksometykach', container: Containers.GLASS, additionalInfo: 'Opakowanie powinno być puste' },
+  { name: 'Szklane opakowanie po kosmetykach', container: Containers.GLASS, additionalInfo: 'Opakowanie powinno być puste' },
+  { name: 'Przeterminowane kosmetyki w plastikowej butelce', container: Containers.MIXED, additionalInfo: '' },
+  { name: 'Przeterminowane kosmetyki w szklanej butelce', container: Containers.MIXED, additionalInfo: '' },
   { name: 'Ceramika', container: Containers.OTHER },
   { name: 'Doniczka', container: Containers.OTHER },
   { name: 'Porcelana', container: Containers.OTHER },

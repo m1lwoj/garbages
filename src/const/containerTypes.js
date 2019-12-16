@@ -4,7 +4,7 @@ export const Containers = {
     PLASTICANDMETALS: 3,
     PAPER: 4,
     GLASS: 5,
-    Electronic: 6,
+    ELECTRONIC: 6,
     OTHER: 99,
 }
 
