@@ -6,10 +6,10 @@ export const PaperContainer = (props) => {
         <div>
             <div>
                 Kontener niebieski
-        </div>
+            </div>
             <div>
                 Papier
-        </div>
-        </div>
+            </div>
+        </div >
     )
 }

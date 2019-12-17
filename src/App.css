@@ -42,6 +42,11 @@ form {
   z-index: -1;
 }
 
+.search-footer {
+  margin: 50px;
+  margin-top: 100px;
+}
+
 @media screen and (min-width : 320px)
 {
   .search-header label
@@ -82,16 +87,8 @@ How ugly and unprofessional are those importants
 How dare I 
 */
 
-.MuiAutocomplete-input {
+.MuiAutocomplete-input {  
   margin-top: 50px !important;
-}
-
-.MuiInputLabel-formControl {
-}
-
-.MuiIconButton-label {
-  /* display: none !important; */
-  /* font-size: 30px; */
 }
 
 .MuiAutocomplete-popupIndicator {

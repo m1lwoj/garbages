@@ -5,20 +5,29 @@ import { GlassContainer } from './containers/glassContainer'
 import { MixedContainer } from './containers/mixedContainer'
 import { PlasticAndMetalsContainer } from './containers/plasticAndMetalsContainer'
 import { PaperContainer } from './containers/paperContainer'
+import { ElectronicWastes } from './containers/electronicWastes';
+import { DangerousWastes } from './containers/dangerousWastes';
+import { HugeWastes } from './containers/hugeWastes';
+import { OtherWastes } from './containers/otherWastes';
 
 export class ContainerDescription extends Component {
     constructor(props) {
         super(props);
-        this.state = { container: props.container, containerTypes: Containers };
+        this.state = { garbage: props.garbage, containerTypes: Containers };
     }
 
     componentWillReceiveProps(props) {
-        this.setState({ container: props.container })
+        this.setState({ garbage: props.garbage })
     }
 
     render() {
         let container;
-        switch (this.state.container) {
+
+        if (!this.state.garbage) {
+            this.state.garbage = { name: '', additionalInfo: '' }
+        }
+
+        switch (this.state.garbage.container) {
             case this.state.containerTypes.BIO:
                 container = <BioContainer />;
                 break;
@@ -34,8 +43,20 @@ export class ContainerDescription extends Component {
             case this.state.containerTypes.PAPER:
                 container = <PaperContainer />;
                 break;
+            case this.state.containerTypes.DANGEROUS:
+                container = <DangerousWastes />;
+                break;
+            case this.state.containerTypes.ELECTRONIC:
+                container = <ElectronicWastes />;
+                break;
+            case this.state.containerTypes.HUGEWASTES:
+                container = <HugeWastes />;
+                break;
+            case this.state.containerTypes.SELECTIVEWASTES:
+                container = <OtherWastes />;
+                break;
             case this.state.containerTypes.OTHER:
-                container = <label>inne</label>;
+                container = <OtherWastes />;
                 break;
             default:
                 container = <label></label>;
@@ -43,7 +64,12 @@ export class ContainerDescription extends Component {
 
         return (
             <div>
-                {container}
+                <div>
+                    {container}
+                </div>
+                <div>
+                    {this.state.garbage.additionalInfo}
+                </div>
             </div>
         );
     }

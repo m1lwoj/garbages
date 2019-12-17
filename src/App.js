@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import { NameForm } from './components/formComponent';
+import { Garbages as Garbages } from './components/gargabes';
 
 function App() {
   return (
     <div className="App">
-      <NameForm />
-      {/* <div className="container-background"> */}
-      {/* </div> */}
+      <Garbages />
     </div>
   );
 }
